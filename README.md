@@ -4,7 +4,7 @@ Esse é um desafio de projeto desenvolvido para o bootcamp  TQI Fullstack Develo
 
 ## PokeAPI
 
-Na função abaixo recebe um parâmetro id, com esse parâmetro é feito uma requesição para a PokeAPI de acordo com o número do pokemon. Então, é retornado um objeto com apenas o nome e uma sprite da resposta.
+Na função abaixo recebe um parâmetro id, com esse parâmetro é feito uma requesição para a PokeAPI de acordo com o número do pokemon. Então, é retornado um objeto com apenas o nome e uma sprite da resposta. O nome é utilizado para a identificação e checagem da carta, e o sprite é utilizado para a imagem da carta.
 
 ```javascript
 function pokemonRequest(id){
