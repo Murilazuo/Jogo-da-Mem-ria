@@ -3,25 +3,21 @@ document.querySelector('.reset Button').addEventListener('click', reset);
 
 cards.forEach((card) => { card.addEventListener('click',flipCard)})
 
-let hasFlippedCard = false;
-let firtCard, secondCard;
+let firtCard = null, secondCard = null;
 let lockBoard = false;
 
 function flipCard(){
     if(lockBoard || this === firtCard) {
-        console.log("Test")
         return;
     }
     this.classList.add('flip');
 
-    if(!hasFlippedCard){
-        hasFlippedCard = true;
+    if(!firtCard){
         firtCard = this;
         return;
     }
 
     secondCard = this;
-    hasFlippedCard = false
 
     checkForMatch();
 }
@@ -52,7 +48,6 @@ function unFlipCards(){
         resetVariables();
     }, 500);
 }
-
 
 
 function shuffle(){
