@@ -1,0 +1,87 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-color: rgb(31, 119, 196);
+
+}
+#title{
+    text-transform: uppercase;
+    background-color: rgb(217, 213, 231) ;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+
+#title img{
+    height: 200px;
+}
+
+.memory-game {
+    height: 600px;
+    width: 600px;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+} 
+
+.card {
+    height: calc( 33.333% - 10px);
+    width: calc(25% - 10px);
+    margin: 5px;
+    position: relative;
+    cursor: pointer;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform 0.9s;
+}
+
+.card:active{
+    transform: scale(0.97);
+    transition: transform 0.3s;
+}
+
+.card-front,
+.card-back{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 5px;
+    backface-visibility: hidden;
+    border: 5px solid black;
+    background-color: black;
+    padding: 5px;
+}
+
+.card-front {
+    transform: rotateY(180deg);
+    background-color: white;
+}
+
+.card.flip{
+    transform: rotateY(180deg);
+}
+
+.reset{
+    display: flex;
+    margin: auto;
+    margin-top: 25px;
+    padding-top: 19px;
+    padding-bottom: 25px;
+    justify-content: center;
+    background-color: white;
+}
+.reset button{
+    margin-top: 0;
+    border-radius: 15px;
+    height: 60px;
+    width: 180px;
+    font-size: 25px;
+}
+
